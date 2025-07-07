@@ -9,7 +9,8 @@ project(planning
 add_definitions(-DDEBUG)  # 定义DEBUG宏
 
 # 指定C++版本
-set(CMAKE_CXX_STANDARD 17)      
+set(CMAKE_CXX_STANDARD 17)     
+enable_testing()            # 启动测试 
 
 # 变量和目录设置
 # 以下这个变量设置会传到子目录里面的，也就是说子目录里面也可以用这个变量
@@ -31,4 +32,5 @@ endif()
 
 # 添加子目录
 add_subdirectory(src)
+add_subdirectory(test/map_test)
 

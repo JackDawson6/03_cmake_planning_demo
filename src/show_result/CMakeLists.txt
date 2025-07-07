@@ -1,22 +1,24 @@
-project(process)
+project(show_result)
 
 # 创建一个动态库
 add_library(${PROJECT_NAME}
 SHARED
-process.cpp
+show_result.cpp
 )
 
 target_include_directories(${PROJECT_NAME}
 PUBLIC
-${PNC_Map_Dir}
+${Process_Dir}
 )
+
 
 target_link_libraries(${PROJECT_NAME}
 PUBLIC
-pnc_map
+process
 )
 
+
 target_link_libraries(${PROJECT_NAME}
-PUBLIC 
-Eigen3::Eigen
+PUBLIC
+easyx
 )

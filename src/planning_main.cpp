@@ -1,5 +1,6 @@
 #include<iostream>
 #include "process.h"
+#include "show_result.h"
 using std::cout, std::endl;
 
 int main(){
@@ -11,6 +12,11 @@ int main(){
 #else  
     cout << ">>>------------Debug mode is OFF------------<<<" << endl;
 #endif
-
     cout << "planing end" << endl;
+
+    cout << "show result start" << endl;
+    show_result result;
+    result.drawResult();
+    cout << "show result end" << endl;
+
 }
